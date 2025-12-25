@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LAN Portal - Login</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Sans:wght@300..700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols_Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "primary-hover": "#0e4bce",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "card-dark": "#1e2330",
+                        "input-dark": "#131a29",
+                        "border-dark": "#324467",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #101622;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #324467;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #135bec;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex flex-col">
+    <!-- Top Navigation -->
+    <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#232f48] px-6 py-4 lg:px-10 bg-white dark:bg-background-dark sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <div class="size-8 text-primary flex items-center justify-center bg-primary/10 rounded-lg">
+                <span class="material-symbols-outlined text-2xl">router</span>
+            </div>
+            <h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">LAN Portal</h2>
+        </div>
+
+        <div class="hidden md:flex items-center gap-8">
+            <nav class="flex items-center gap-6">
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
+                    href="pricing.html">Plans</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
+                    href="#">Coverage</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
+                    href="support.html">Support</a>
+            </nav>
+            <div class="flex items-center gap-2 text-green-500 bg-green-500/10 px-3 py-1.5 rounded-full">
+                <span class="material-symbols-outlined text-[18px]">verified_user</span>
+                <span class="text-xs font-bold uppercase tracking-wider">Gateway Secure</span>
+            </div>
+        </div>
+
+        <div class="flex md:hidden">
+            <button class="text-slate-900 dark:text-white p-2">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow flex items-center justify-center p-4 relative overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <div
+                class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] mix-blend-screen opacity-30">
+            </div>
+            <div
+                class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-500/20 rounded-full blur-[100px] mix-blend-screen opacity-20">
+            </div>
+        </div>
+
+        <div class="layout-container flex w-full max-w-5xl gap-12 z-10 flex-col md:flex-row items-center">
+            <!-- Left Side: Hero / Info (Desktop Only) -->
+            <div class="hidden md:flex flex-col flex-1 gap-6 text-left pr-8">
+                <div
+                    class="inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 dark:border-border-dark bg-white/50 dark:bg-card-dark/50 px-4 py-2 backdrop-blur-sm">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                    </span>
+                    <span class="text-xs font-bold uppercase tracking-wide text-slate-700 dark:text-slate-300">Local
+                        Network Active</span>
+                </div>
+
+                <h1 class="text-4xl lg:text-5xl font-black leading-[1.1] tracking-tight">
+                    Seamless & Secure <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">High-Speed
+                        Access</span>
+                </h1>
+
+                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-md font-body leading-relaxed">
+                    Log in to your gateway account to manage your plan, check usage, and stay connected to the local
+                    high-speed network.
+                </p>
+
+                <div class="mt-4 grid grid-cols-2 gap-4">
+                    <div
+                        class="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark shadow-sm">
+                        <span class="material-symbols-outlined text-primary text-3xl">speed</span>
+                        <div>
+                            <p class="font-bold text-lg leading-none">1 Gbps</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Local Link Speed</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark shadow-sm">
+                        <span class="material-symbols-outlined text-primary text-3xl">shield</span>
+                        <div>
+                            <p class="font-bold text-lg leading-none">AES-256</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Encryption</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Auth Card -->
+            <div class="w-full max-w-[480px] flex-shrink-0">
+                <div
+                    class="bg-white dark:bg-card-dark rounded-2xl shadow-2xl border border-slate-200 dark:border-border-dark overflow-hidden">
+                    <!-- Tabs Header -->
+                    <div class="grid grid-cols-2 border-b border-slate-200 dark:border-border-dark">
+                        <button
+                            class="relative flex items-center justify-center py-5 text-sm font-bold tracking-wide transition-colors text-primary border-b-2 border-primary bg-slate-50 dark:bg-card-dark">
+                            Log In
+                        </button>
+                        <button
+                            class="relative flex items-center justify-center py-5 text-sm font-bold tracking-wide transition-colors text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 border-b-2 border-transparent bg-slate-100 dark:bg-input-dark">
+                            Create Account
+                        </button>
+                    </div>
+
+                    <!-- Form Content -->
+                    <div class="p-6 sm:p-8 flex flex-col gap-6">
+                        <!-- Login Form -->
+                        <div class="flex flex-col gap-5">
+                            <label class="flex flex-col gap-2">
+                                <span class="text-sm font-bold text-slate-700 dark:text-slate-200">Email Address</span>
+                                <div class="relative group">
+                                    <span
+                                        class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">
+                                        <span class="material-symbols-outlined text-[20px]">mail</span>
+                                    </span>
+                                    <input
+                                        class="w-full h-12 pl-12 pr-4 bg-slate-50 dark:bg-input-dark border border-slate-200 dark:border-border-dark rounded-lg text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none font-body text-sm"
+                                        placeholder="name@example.com" type="email" />
+                                </div>
+                            </label>
+
+                            <label class="flex flex-col gap-2">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm font-bold text-slate-700 dark:text-slate-200">Password</span>
+                                </div>
+                                <div class="relative group">
+                                    <span
+                                        class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">
+                                        <span class="material-symbols-outlined text-[20px]">lock</span>
+                                    </span>
+                                    <input
+                                        class="w-full h-12 pl-12 pr-12 bg-slate-50 dark:bg-input-dark border border-slate-200 dark:border-border-dark rounded-lg text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none font-body text-sm"
+                                        placeholder="Enter your password" type="password" />
+                                    <button
+                                        class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                                        <span class="material-symbols-outlined text-[20px]">visibility</span>
+                                    </button>
+                                </div>
+                            </label>
+
+                            <div class="flex items-center justify-between mt-1">
+                                <label class="flex items-center gap-2 cursor-pointer group">
+                                    <div class="relative flex items-center">
+                                        <input
+                                            class="peer h-4 w-4 cursor-pointer appearance-none rounded border border-slate-300 dark:border-slate-600 bg-slate-100 dark:bg-input-dark transition-all checked:border-primary checked:bg-primary"
+                                            type="checkbox" />
+                                        <span
+                                            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 peer-checked:opacity-100 text-white pointer-events-none">
+                                            <span class="material-symbols-outlined text-[14px] font-bold">check</span>
+                                        </span>
+                                    </div>
+                                    <span
+                                        class="text-sm font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-800 dark:group-hover:text-slate-200 transition-colors">Remember
+                                        me</span>
+                                </label>
+
+                                <a class="text-sm font-bold text-primary hover:text-primary-hover hover:underline transition-colors"
+                                    href="#">Forgot Password?</a>
+                            </div>
+
+                            <button
+                                class="w-full h-12 bg-primary hover:bg-primary-hover text-white rounded-lg font-bold text-sm tracking-wide transition-all shadow-lg shadow-primary/25 mt-2 flex items-center justify-center gap-2"
+                                onclick="window.location.href='dashboard.html'">
+                                <span>Log In & Connect</span>
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            </button>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="relative flex py-2 items-center">
+                            <div class="flex-grow border-t border-slate-200 dark:border-border-dark"></div>
+                            <span
+                                class="flex-shrink-0 mx-4 text-slate-400 dark:text-slate-500 text-xs font-medium uppercase tracking-wider">Or
+                                continue with</span>
+                            <div class="flex-grow border-t border-slate-200 dark:border-border-dark"></div>
+                        </div>
+
+                        <!-- Social / SSO -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <button
+                                class="flex items-center justify-center gap-3 h-11 rounded-lg border border-slate-200 dark:border-border-dark bg-slate-50 dark:bg-input-dark hover:bg-slate-100 dark:hover:bg-[#253045] transition-colors text-sm font-bold text-slate-700 dark:text-slate-200">
+                                <img alt="Google Logo" class="h-5 w-5"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfm8mz2u3PO1QQImxxPuwqFcpk4rkssPuJBVyg2tfcKm_ywYOBGFW4cD7NRPCTt4dxpGbDXeuzREfqGXLm9xh3thE2e09UisbRbY3uG4PzMlMLyqIu-KRH3FlX8JAs7fRmpEw1TYTYUg_XYmKFoSYlLuh0mzN0e8hcpIlQjyrLC1FEaKySgXUnT4Umt68TnyfD87nmiSjq6DplhXI2xsVGNAj3CM9P0v6N5ATlz6rqlY72Pn-v93Cq-9lIcR9OuVnMrjSRKRwzoyXA" />
+                                <span>Google</span>
+                            </button>
+
+                            <button
+                                class="flex items-center justify-center gap-3 h-11 rounded-lg border border-slate-200 dark:border-border-dark bg-slate-50 dark:bg-input-dark hover:bg-slate-100 dark:hover:bg-[#253045] transition-colors text-sm font-bold text-slate-700 dark:text-slate-200">
+                                <img alt="Facebook Logo" class="h-5 w-5"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuApe5P4qpMwZiy8Lsa_GoQLU6dTzN1Efgdg4-MREtX3rL9wt2gAOmuSN4q5yVe8kwftDG-5TiN47f9UivwlzXk6PnZfIl9EGd4ieFlR_4euhdszf0Sk7Zq3nCgVdvxEWM7cswfa54VIpzYAjBabwbpf3Jsw2ddnraZSTO_l386pG8im2WNLCZuhzEdOgF_erfhJQKk65IPeOtcKOMOYaYI6C4VOoESQgwAj6PR_8F9AWV_inI5c5Tz5mNnjtgSccc8jBZ6TZYBLTvHr" />
+                                <span>Facebook</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer -->
+                    <div
+                        class="bg-slate-50 dark:bg-input-dark border-t border-slate-200 dark:border-border-dark p-4 text-center">
+                        <p class="text-sm text-slate-500 dark:text-slate-400">
+                            By continuing, you agree to our <a class="text-primary hover:underline" href="#">Terms of
+                                Service</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Support link outside card -->
+                <div class="mt-6 text-center">
+                    <p class="text-sm font-medium text-slate-600 dark:text-slate-400">
+                        Trouble connecting?
+                        <a class="text-primary hover:underline font-bold inline-flex items-center gap-1"
+                            href="support.html">
+                            Contact Network Support
+                            <span class="material-symbols-outlined text-[16px]">support_agent</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Map/Footer Section (Just to ground the page) -->
+    <footer class="border-t border-slate-200 dark:border-border-dark bg-white dark:bg-background-dark py-8 mt-auto">
+        <div class="layout-container px-6 lg:px-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2 opacity-50">
+                    <div class="size-6 text-slate-900 dark:text-white">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <span class="text-sm font-semibold">LAN Portal © 2023</span>
+                </div>
+
+                <div class="flex gap-6">
+                    <div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+                        <span class="material-symbols-outlined text-lg">public</span>
+                        <span class="text-sm">English (US)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

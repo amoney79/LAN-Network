@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LAN Connect - Pricing & Plans</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-body selection:bg-primary selection:text-white overflow-x-hidden">
+    <!-- Top Navigation -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-solid border-slate-200 dark:border-[#232f48] bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+        <div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="size-8 text-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-3xl">lan</span>
+                </div>
+                <h2 class="text-lg font-bold tracking-tight">LAN Connect</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="text-sm font-bold text-primary" href="pricing.html">Plans</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Network Status</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="support.html">Support</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="hidden sm:flex h-9 px-4 items-center justify-center rounded-lg bg-primary text-white text-sm font-bold hover:bg-blue-600 transition-colors"
+                    onclick="window.location.href='login.html'">
+                    Login
+                </button>
+                <button class="md:hidden p-2 text-slate-900 dark:text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow flex flex-col items-center">
+        <!-- Hero Section -->
+        <section class="w-full max-w-[1280px] px-4 md:px-6 py-12 md:py-20 flex flex-col items-center text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-4">
+                High-Performance <span class="text-primary">Local Network</span>
+            </h1>
+            <p class="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+                Experience ultra-low latency, gigabit speeds, and rock-solid stability. Choose the tier that fits your
+                connection needs.
+            </p>
+
+            <!-- Billing Toggle -->
+            <div class="flex p-1 rounded-xl bg-slate-200 dark:bg-[#232f48] relative">
+                <label class="cursor-pointer relative z-10">
+                    <input checked="" class="peer sr-only" name="billing" type="radio" value="hourly" />
+                    <span
+                        class="block px-6 py-2 rounded-lg text-sm font-bold text-slate-500 peer-checked:text-slate-900 dark:text-[#92a4c9] dark:peer-checked:text-white transition-colors">Hourly
+                        / Daily</span>
+                    <div
+                        class="absolute inset-0 bg-white dark:bg-[#111722] rounded-lg shadow-sm opacity-0 peer-checked:opacity-100 transition-opacity -z-10 h-full w-full">
+                    </div>
+                </label>
+                <label class="cursor-pointer relative z-10">
+                    <input class="peer sr-only" name="billing" type="radio" value="monthly" />
+                    <span
+                        class="block px-6 py-2 rounded-lg text-sm font-bold text-slate-500 peer-checked:text-slate-900 dark:text-[#92a4c9] dark:peer-checked:text-white transition-colors">Monthly
+                        Memberships</span>
+                    <div
+                        class="absolute inset-0 bg-white dark:bg-[#111722] rounded-lg shadow-sm opacity-0 peer-checked:opacity-100 transition-opacity -z-10 h-full w-full">
+                    </div>
+                </label>
+            </div>
+        </section>
+
+        <!-- Pricing Cards -->
+        <section class="w-full max-w-[1280px] px-4 md:px-6 pb-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Card 1: Guest -->
+                <div
+                    class="relative flex flex-col p-6 rounded-2xl border border-slate-200 dark:border-[#324467] bg-white dark:bg-[#192233] hover:border-primary/50 transition-all duration-300 group shadow-sm hover:shadow-lg dark:hover:shadow-primary/10">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2">Guest Pass</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Perfect for quick downloads or casual
+                            browsing.</p>
+                    </div>
+
+                    <div class="mb-6 flex items-baseline gap-1">
+                        <span class="text-4xl font-black text-slate-900 dark:text-white">$5</span>
+                        <span class="text-slate-500 dark:text-slate-400 font-medium">/hr</span>
+                    </div>
+
+                    <button
+                        class="w-full py-3 px-4 rounded-lg border-2 border-slate-200 dark:border-[#324467] text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-[#232f48] transition-colors mb-8 group-hover:border-primary group-hover:text-primary">
+                        Connect Now
+                    </button>
+
+                    <div class="space-y-4 flex-grow">
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span>Standard 100Mbps Speed</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span>Shared IP Address</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span>DHCP Assigned</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-slate-400 dark:text-slate-600">
+                            <span class="material-symbols-outlined text-xl">cancel</span>
+                            <span>No Firewall Customization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Pro (Highlighted) -->
+                <div
+                    class="relative flex flex-col p-6 rounded-2xl border-2 border-primary bg-white dark:bg-[#192233] shadow-xl shadow-primary/10 transform md:-translate-y-4 z-10">
+                    <div class="absolute top-0 right-0 transform translate-x-2 -translate-y-2">
+                        <span
+                            class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">Most
+                            Popular</span>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2 text-primary">Pro LAN</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">High priority traffic for gaming and
+                            streaming.</p>
+                    </div>
+
+                    <div class="mb-6 flex items-baseline gap-1">
+                        <span class="text-4xl font-black text-slate-900 dark:text-white">$20</span>
+                        <span class="text-slate-500 dark:text-slate-400 font-medium">/day</span>
+                    </div>
+
+                    <button
+                        class="w-full py-3 px-4 rounded-lg bg-primary text-white font-bold hover:bg-blue-600 shadow-lg shadow-primary/25 transition-all mb-8">
+                        Get Pro Access
+                    </button>
+
+                    <div class="space-y-4 flex-grow">
+                        <div class="flex items-center gap-3 text-sm font-medium">
+                            <span class="material-symbols-outlined text-primary text-xl">bolt</span>
+                            <span>1Gbps Priority Bandwidth</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span>Ultra-Low Latency Routing</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span>10Gbps Uplink Access</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span>Public IP Available</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span>Advanced QoS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Monthly -->
+                <div
+                    class="relative flex flex-col p-6 rounded-2xl border border-slate-200 dark:border-[#324467] bg-white dark:bg-[#192233] hover:border-primary/50 transition-all duration-300 group shadow-sm hover:shadow-lg dark:hover:shadow-primary/10">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2">Monthly Seat</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Dedicated resources for residents and
+                            power users.</p>
+                    </div>
+
+                    <div class="mb-6 flex items-baseline gap-1">
+                        <span class="text-4xl font-black text-slate-900 dark:text-white">$150</span>
+                        <span class="text-slate-500 dark:text-slate-400 font-medium">/mo</span>
+                    </div>
+
+                    <button
+                        class="w-full py-3 px-4 rounded-lg border-2 border-slate-200 dark:border-[#324467] text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-[#232f48] transition-colors mb-8 group-hover:border-primary group-hover:text-primary">
+                        Reserve Seat
+                    </button>
+
+                    <div class="space-y-4 flex-grow">
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span>Dedicated Physical Port</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span>Static IPv4 Address</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span>24/7 Unlimited Access</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span>Hardware Locker Included</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Comparison -->
+        <section class="w-full max-w-[960px] px-4 md:px-6 pb-20">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-4">Technical Specifications</h2>
+                <p class="text-slate-500 dark:text-slate-400">Detailed breakdown of network capabilities per tier.</p>
+            </div>
+
+            <div
+                class="overflow-x-auto rounded-xl border border-slate-200 dark:border-[#324467] bg-white dark:bg-[#192233]">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-slate-200 dark:border-[#324467] bg-slate-50 dark:bg-[#232f48]/50">
+                            <th
+                                class="p-4 text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                Feature</th>
+                            <th class="p-4 text-sm font-bold text-slate-900 dark:text-white">Guest</th>
+                            <th class="p-4 text-sm font-bold text-primary">Pro LAN</th>
+                            <th class="p-4 text-sm font-bold text-slate-900 dark:text-white">Monthly</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 dark:divide-[#324467]">
+                        <tr>
+                            <td class="p-4 text-sm font-medium text-slate-500 dark:text-slate-400">Download Speed</td>
+                            <td class="p-4 text-sm text-slate-900 dark:text-white">100 Mbps</td>
+                            <td class="p-4 text-sm font-bold text-slate-900 dark:text-white">1 Gbps</td>
+                            <td class="p-4 text-sm text-slate-900 dark:text-white">1 Gbps Dedicated</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 text-sm font-medium text-slate-500 dark:text-slate-400">Upload Speed</td>
+                            <td class="p-4 text-sm text-slate-900 dark:text-white">50 Mbps</td>
+                            <td class="p-4 text-sm font-bold text-slate-900 dark:text-white">1 Gbps</td>
+                            <td class="p-4 text-sm text-slate-900 dark:text-white">1 Gbps Symmetric</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 text-sm font-medium text-slate-500 dark:text-slate-400">Latency (Local)</td>
+                            <td class="p-4 text-sm text-slate-900 dark:text-white">&lt; 5ms</td>
+                            <td class="p-4 text-sm font-bold text-slate-900 dark:text-white">&lt; 1ms</td>
+                            <td class="p-4 text-sm text-slate-900 dark:text-white">&lt; 1ms</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 text-sm font-medium text-slate-500 dark:text-slate-400">Public IP</td>
+                            <td class="p-4 text-sm text-slate-900 dark:text-white">
+                                <span class="material-symbols-outlined text-slate-400 text-lg">remove</span>
+                            </td>
+                            <td class="p-4 text-sm text-slate-900 dark:text-white">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                            </td>
+                            <td class="p-4 text-sm text-slate-900 dark:text-white">
+                                <span class="material-symbols-outlined text-primary text-lg">check</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 text-sm font-medium text-slate-500 dark:text-slate-400">Port Forwarding</td>
+                            <td class="p-4 text-sm text-slate-900 dark:text-white">
+                                <span class="material-symbols-outlined text-slate-400 text-lg">remove</span>
+                            </td>
+                            <td class="p-4 text-sm text-slate-900 dark:text-white">UPnP</td>
+                            <td class="p-4 text-sm text-slate-900 dark:text-white">Full Control</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="w-full max-w-[800px] px-4 md:px-6 pb-24">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <details
+                    class="group bg-white dark:bg-[#192233] rounded-lg border border-slate-200 dark:border-[#324467] open:border-primary">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-4 p-5 font-bold text-lg marker:content-none text-slate-900 dark:text-white">
+                        <span>Do I need to bring my own ethernet cable?</span>
+                        <span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-500 dark:text-slate-400 leading-relaxed">
+                        We recommend bringing a CAT6 cable for best performance. However, we have cables available for
+                        rent at the front desk for $2/day or purchase for $10.
+                    </div>
+                </details>
+
+                <details
+                    class="group bg-white dark:bg-[#192233] rounded-lg border border-slate-200 dark:border-[#324467] open:border-primary">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-4 p-5 font-bold text-lg marker:content-none text-slate-900 dark:text-white">
+                        <span>Can I upgrade my plan midway?</span>
+                        <span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Yes! You can upgrade from Guest to Pro at any time through this portal. The difference in price
+                        will be calculated based on the remaining time.
+                    </div>
+                </details>
+
+                <details
+                    class="group bg-white dark:bg-[#192233] rounded-lg border border-slate-200 dark:border-[#324467] open:border-primary">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-4 p-5 font-bold text-lg marker:content-none text-slate-900 dark:text-white">
+                        <span>Is the network secure?</span>
+                        <span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <div class="px-5 pb-5 pt-0 text-slate-500 dark:text-slate-400 leading-relaxed">
+                        We use enterprise-grade firewalls and network isolation for Guest users. Pro and Monthly users
+                        have their own VLANs for enhanced security and device isolation.
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-slate-200 dark:border-[#232f48] bg-white dark:bg-[#192233] py-8">
+        <div class="max-w-[1280px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-sm text-slate-500 dark:text-slate-400">© 2024 LAN Connect. All rights reserved.</p>
+            <div class="flex items-center gap-6">
+                <a class="text-sm text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white"
+                    href="#">Terms of Service</a>
+                <a class="text-sm text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white"
+                    href="#">Privacy Policy</a>
+                <div class="flex items-center gap-2 pl-4 border-l border-slate-200 dark:border-[#324467]">
+                    <div class="size-2 rounded-full bg-green-500 animate-pulse"></div>
+                    <span class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">System
+                        Online</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
