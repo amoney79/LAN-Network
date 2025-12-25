@@ -249,9 +249,9 @@ LAN-Network/
 - [x] Login page
 - [x] README documentation
 
-### **Phase 2: Additional Pages (🚧 In Progress)**
-- [ ] Dashboard page
-- [ ] Support page
+### **Phase 2: Additional Pages (✅ Complete)**
+- [x] Dashboard page
+- [x] Support page
 - [ ] User profile page
 - [ ] Payment confirmation page
 
